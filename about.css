@@ -95,65 +95,51 @@ body {
 
 /* ====main section===== */
 
-h1,
-p {
-    font-family: 'Kaushan Script', cursive;
-    text-transform: capitalize;
-}
-
 h1 {
+    font-family: 'Kaushan Script', cursive;
     font-size: 48rem;
-    font-weight: 400;
     margin: 0;
+    text-transform: capitalize;
+    font-weight: 400;
 }
 
 p {
-    font-size: 22rem;
-    letter-spacing: 0.15em;
-}
-
-.main-sec {
-    background: url(./images-design/hero-bcg.jpeg) center/cover no-repeat;
-    height: 95vh;
-    min-height: 390px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-section-content-div {
-    background-color: rgba(255, 255, 255, 0.6);
-    width: 100%;
-    min-width: 250px;
-    text-align: center;
-    padding: 2em 1em;
-    transition: box-shadow 0.5s;
-}
-
-.main-section-content-div:hover,
-.main-section-content-div:focus {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.shop-btn {
-    font-size: 16rem;
-    font-weight: 700;
-    background-color: #F09D51;
+    text-align: justify;
     color: #102A42;
-    text-transform: uppercase;
-    border: none;
-    padding: 1em 3em;
-    letter-spacing: 0.2em;
-    margin-top: 1em;
-    border-radius: 5px;
-    transition: transform 0.5s;
 }
 
-.shop-btn:hover,
-.shop-btn:focus {
-    cursor: pointer;
-    transform: scale(1.2);
+main {
+    background: url(./images-design/bg2.jpg) center/cover no-repeat;
+    height: 95vh;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+
 }
+
+hr {
+    width: 15%;
+    max-width: 98px;
+    min-width: 57px;
+    height: 4px;
+    margin: 0;
+    margin-left: 4em;
+    margin-top: 0.2em;
+    background-color: #F09D51;
+    border: none;
+}
+
+.main-section-container {
+    background: rgba(255, 255, 255, 0.7);
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 250px;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)
+}
+
 
 
 @media (min-width: 800px) {
@@ -199,11 +185,11 @@ p {
 
     /* main-section */
     h1 {
-        font-size: 56rem;
+        font-size: 52rem;
     }
 
     p {
-        font-size: 28rem;
+        font-size: 20rem;
     }
 
 }

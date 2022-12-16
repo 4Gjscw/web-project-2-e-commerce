@@ -7,9 +7,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Comfy House || Products</title>
     <link rel="stylesheet" href="product.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato:wght@400;700;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="nav-bar-div">
+                <button type="button" class="nav-toggle-btn"><i class="fa-solid fa-bars"></i></button>
+                <img src="./images-design/logo.svg" alt="Comfy House Logo" class="logo">
+                <div class="shopping-cart-icon-div">
+                    <button type="button" class="shopping-cart-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                    <div class="shop-item-number">0</div>
+                </div>
+            </div>
+
+
+            <!-- the list will be shown as a modal when the toggle btn is clicked -->
+            <div class="nav-list-modal-div">
+                <div class="close-nav-list-btn-div">
+                    <button class="close-nav-btn" type="button"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+
+                <ul class="nav-list-ul">
+                    <li><a href="./index.html" class="nav-link">home</a></li>
+                    <li><a href="./product.html" class="nav-link">products</a></li>
+                    <li><a href="./about.html" class="nav-link">about</a></li>
+                </ul>
+            </div>
+            <!-- end of the nav-list modal section -->
+
+        </nav>
+    </header>
+    <main>
+        <h1>our products</h1>
+        <hr>
+
+        <section class="individual-product-sec">
+
+            <div class="product-img-div">
+                <img src="./images-products/product-1.jpeg" alt="a pic of a product" class="product-pic">
+                <button type="button" class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> add to cart</button>
+            </div>
+
+            <h3>queen panel bed</h3>
+            <h4>$10.99</h4>
+        </section>
+
+    </main>
+
+
+    <script src="./product.js"></script>
 </body>
 
 

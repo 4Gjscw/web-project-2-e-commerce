@@ -110,7 +110,7 @@ p {
 
 main {
     background: url(./images-design/bg2.jpg) center/cover no-repeat;
-    height: 95vh;
+    height: 86.2vh;
     min-height: 350px;
     display: flex;
     align-items: center;
@@ -138,6 +138,22 @@ hr {
     padding: 1em;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)
+}
+
+/* ====footer-copyright-section===== */
+footer {
+    background-color: #c98342;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 13rem;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-content-div {
+    min-width: 248px;
 }
 
 

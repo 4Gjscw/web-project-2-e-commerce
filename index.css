@@ -114,7 +114,7 @@ p {
 
 .main-sec {
     background: url(./images-design/hero-bcg.jpeg) center/cover no-repeat;
-    height: 95vh;
+    height: 86.2vh;
     min-height: 390px;
     display: flex;
     justify-content: center;
@@ -153,6 +153,22 @@ p {
 .shop-btn:focus {
     cursor: pointer;
     transform: scale(1.2);
+}
+
+/* ====footer-copyright-section===== */
+footer {
+    background-color: #c98342;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 13rem;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-content-div {
+    min-width: 248px;
 }
 
 

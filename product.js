@@ -150,9 +150,49 @@ window.addEventListener('DOMContentLoaded', function () {
             const clickedBtnId = event.currentTarget.id;
             const cartItemsDiv = document.querySelector('.all-incart-items-div');
 
+            const cartItemSec = document.createElement('section');
+            cartItemSec.classList.add('each-incart-item-section');
+
+            cartItemSec.innerHTML = `<div class="incart-item-pic-div">
+            <img src=${products[clickedBtnId].img} alt="a photo of a piece of furniture"
+                class="incart-item-pic">
+        </div>
+
+
+        <div class="incart-item-info-div">
+            <h5 class="incart-item-title">${products[clickedBtnId].title}</h5>
+            <h5>$<span class="in-cart-item-price">${products[clickedBtnId].price}</span></h5>
+            <button type="button" class="remove-cart-item-button">remove</button>
+        </div>
+
+        <div class="incart-item-quantity-div">
+            <button type="button" class="add-one-btn"><i class="fa-solid fa-chevron-up"></i></button>
+            <div class="item-quantity">1</div>
+            <button type="button" class="minus-one-btn"><i class="fa-solid fa-chevron-down"></i></button>
+        </div>`
+
+            cartItemsDiv.appendChild(cartItemSec);
+
+
+            //once the item is added to cart, the tag on the pic will become "in-cart", and the vutton will be disabled
+            btn.textContent = 'in cart';
+            btn.disabled = true;
+
+            //total price
+            const totalPrice = document.querySelector('.total-price');
+
+            const inCartItemPrice = document.querySelectorAll('.in-cart-item-price');
+
+            let price = 0;
+            for (i = 0; i < inCartItemPrice.length; i++) {
+                const itemPrices =  Number(inCartItemPrice[i].textContent);
+                price += itemPrices;
+            };
+            totalPrice.textContent = price.toFixed(2);
 
 
         });
+
     });
 
 });

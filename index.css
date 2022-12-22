@@ -2,6 +2,12 @@ html {
     font-size: 6.25%;
 }
 
+:root {
+    --mainColor: #F09D51;
+    --mainGrey: #E7E2DD;
+    --letterSpace: 0.15em;
+}
+
 body {
     font-size: 16rem;
     font-family: 'Lato', sans-serif;
@@ -18,7 +24,7 @@ body {
     align-items: center;
     padding: 1em 5em;
     padding-left: 1em;
-    background-color: #E7E2DD;
+    background-color: var(--mainGrey);
 }
 
 .nav-toggle-btn {
@@ -36,7 +42,7 @@ body {
 
 /* nav-list modal section*/
 .nav-list-modal-div {
-    background-color:#dbd8d5;
+    background-color:var(--mainGrey);
     position: fixed;
     z-index: 999;
     top: 20px;
@@ -137,27 +143,25 @@ p {
 
 .shop-btn {
     font-size: 16rem;
-    font-weight: 700;
-    background-color: #F09D51;
-    color: #102A42;
+    background-color: var(--mainColor);
+    color: #fff;
     text-transform: uppercase;
-    border: none;
+    border: var(--mainColor) 1px solid;
     padding: 1em 3em;
-    letter-spacing: 0.2em;
+    letter-spacing: var(--letterSpace);
     margin-top: 1em;
-    border-radius: 5px;
-    transition: transform 0.5s;
+    transition: transform 0.6s;
 }
 
 .shop-btn:hover,
 .shop-btn:focus {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 /* ====footer-copyright-section===== */
 footer {
-    background-color: #c98342;
+    background-color: var(--mainColor);
     color: #fff;
     text-transform: capitalize;
     font-size: 13rem;
@@ -180,14 +184,14 @@ footer {
         flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
-        background-color: #E7E2DD;
+        background-color: var(--mainGrey);
     }
     .nav-list-modal-div {
         visibility: visible !important;
         position: static;
         height: fit-content;
         width: auto;
-        background-color: #E7E2DD;
+        background-color: var(--mainGrey);
     }
     .nav-list-ul {
         display: flex;

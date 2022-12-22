@@ -185,17 +185,25 @@ window.addEventListener('DOMContentLoaded', function () {
 
             let price = 0;
             for (i = 0; i < inCartItemPrice.length; i++) {
-                const itemPrices =  Number(inCartItemPrice[i].textContent);
+                const itemPrices = Number(inCartItemPrice[i].textContent);
                 price += itemPrices;
             };
             totalPrice.textContent = price.toFixed(2);
 
+            //clear cart
+            const clearCartBtn = document.querySelector('.clear-cart-btn');
 
+            clearCartBtn.addEventListener('click', function () {
+                cartItemsDiv.innerHTML = '';
+                totalPrice.textContent = '0';
+            });
         });
-
     });
 
+
 });
+
+
 
 
 

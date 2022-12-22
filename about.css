@@ -2,6 +2,12 @@ html {
     font-size: 6.25%;
 }
 
+:root {
+    --mainColor: #F09D51;
+    --mainGrey: #E7E2DD;
+}
+
+
 body {
     font-size: 16rem;
     font-family: 'Lato', sans-serif;
@@ -18,7 +24,7 @@ body {
     align-items: center;
     padding: 1em 5em;
     padding-left: 1em;
-    background-color: #E7E2DD;
+    background-color: var(--mainGrey);
 }
 
 .nav-toggle-btn {
@@ -36,7 +42,7 @@ body {
 
 /* nav-list modal section*/
 .nav-list-modal-div {
-    background-color:#dbd8d5;
+    background-color: var(--mainGrey);
     position: fixed;
     z-index: 999;
     top: 20px;
@@ -125,7 +131,7 @@ hr {
     margin: 0;
     margin-left: 4em;
     margin-top: 0.2em;
-    background-color: #F09D51;
+    background-color: var(--mainColor);
     border: none;
 }
 
@@ -142,7 +148,7 @@ hr {
 
 /* ====footer-copyright-section===== */
 footer {
-    background-color: #c98342;
+    background-color: var(--mainColor);
     color: #fff;
     text-transform: capitalize;
     font-size: 13rem;
@@ -166,14 +172,14 @@ footer {
         flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
-        background-color: #E7E2DD;
+        background-color: var(--mainGrey);
     }
     .nav-list-modal-div {
         visibility: visible !important;
         position: static;
         height: fit-content;
         width: auto;
-        background-color: #E7E2DD;
+        background-color: var(--mainGrey);
     }
     .nav-list-ul {
         display: flex;

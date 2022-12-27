@@ -22,7 +22,7 @@ const cartDiv = document.querySelector('.shopping-cart-list-div');
 
 
 openCartBtn.addEventListener('click', function () {
-    cartBigBg.style.visibility = 'visible';
+    cartBigBg.classList.add('open-shopping-cart-container-bg');
     cartDiv.classList.add('open-shopping-cart');
 });
 
@@ -31,7 +31,7 @@ openCartBtn.addEventListener('click', function () {
 const closeCartBtn = document.querySelector('.close-shopping-cart-btn');
 
 closeCartBtn.addEventListener('click', function () {
-    cartBigBg.style.visibility = 'hidden';
+    cartBigBg.classList.remove('open-shopping-cart-container-bg');
     cartDiv.classList.remove('open-shopping-cart');
 });
 

@@ -156,6 +156,10 @@ body {
     padding-bottom: 3em;
 }
 
+.open-shopping-cart-container-bg {
+    visibility: visible;
+}
+
 .open-shopping-cart {
     transform: translateX(0);
 }

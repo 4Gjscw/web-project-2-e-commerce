@@ -1,0 +1,100 @@
+{
+    "items": [
+      {
+        "sys": { "id": "1" },
+        "fields": {
+          "title": "queen panel bed",
+          "price": 10.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-1.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "2" },
+        "fields": {
+          "title": "king panel bed",
+          "price": 12.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-2.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "3" },
+        "fields": {
+          "title": "single panel bed",
+          "price": 12.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-3.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "4" },
+        "fields": {
+          "title": "twin panel bed",
+          "price": 22.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-4.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "5" },
+        "fields": {
+          "title": "fridge",
+          "price": 88.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-5.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "6" },
+        "fields": {
+          "title": "dresser",
+          "price": 32.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-6.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "7" },
+        "fields": {
+          "title": "couch",
+          "price": 45.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-7.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "8" },
+        "fields": {
+          "title": "table",
+          "price": 33.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-8.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "9" },
+        "fields": {
+          "title": "high-back bench",
+          "price": 9.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-9.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "10" },
+        "fields": {
+          "title": "albany table",
+          "price": 79.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-10.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "11" },
+        "fields": {
+          "title": "accent chair",
+          "price": 25.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-11.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "12" },
+        "fields": {
+          "title": "dinning table",
+          "price": 66.99,
+          "image": { "fields": { "file": { "url": "./images-products/product-12.jpg" } } }
+        }
+      }
+    ]
+  }

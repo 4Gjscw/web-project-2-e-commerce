@@ -3,13 +3,13 @@
 const navToggleBtn = document.querySelector('.nav-toggle-btn');
 const navListModal = document.querySelector('.nav-list-modal-div');
 
-navToggleBtn.addEventListener('click', function() {
+navToggleBtn.addEventListener('click', () => {
     navListModal.style.visibility = 'visible';
 });
 
 //close the nav-list modal when the closed button is clicked
 const closeNavBtn = document.querySelector('.close-nav-btn');
 
-closeNavBtn.addEventListener('click', function() {
+closeNavBtn.addEventListener('click', () => {
     navListModal.style.visibility = 'hidden';
 });

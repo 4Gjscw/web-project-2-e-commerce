@@ -16,3 +16,56 @@ closeCartBtn.addEventListener('click', () => {
 });
 
 
+
+//get all the products from other places
+class Products {
+    async getAllProducts() {
+        try {
+            //the json file was created to imitate the response that we will get from Contentful
+            const result = await fetch('./products.json');
+            const data = await result.json();
+
+            //select the data that we need that we get from the responses we fetched, and change the data format to the way we want
+            let products = data.items;
+            products = products.map((item) => {
+                const {title, price} = item.fields;
+                const {id} = item.sys;
+                const image = item.fields.image.fields.file.url;
+                return {title, price, id, image};
+            })
+            return products;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
+//display all the products
+const allProductsContainer = document.querySelector('.all-products-container-div');
+
+class showProducts {
+    displayProducts(products) {
+        let result = '';
+        products.forEach((element) => {
+            result += `<section class="individual-product-sec">
+
+            <div class="product-img-div">
+                <img src=${element.image} alt="a pic of a product" class="product-pic">
+                <button type="button" class="more-details-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="button" class="add-to-cart-btn" data-id=${element.id}><i class="fa-solid fa-cart-plus"></i> add to
+                    cart</button>
+            </div>
+
+            <h3>${element.title}</h3>
+            <h4>$${element.price}</h4>
+        </section>`
+        });
+        allProductsContainer.innerHTML = result;
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const myProducts = new Products;
+    const display = new showProducts;
+    myProducts.getAllProducts().then((products) => display.displayProducts(products));
+});

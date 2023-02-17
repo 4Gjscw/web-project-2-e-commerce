@@ -28,10 +28,10 @@ class Products {
             //select the data that we need that we get from the responses we fetched, and change the data format to the way we want
             let products = data.items;
             products = products.map((item) => {
-                const {title, price} = item.fields;
-                const {id} = item.sys;
+                const { title, price } = item.fields;
+                const { id } = item.sys;
                 const image = item.fields.image.fields.file.url;
-                return {title, price, id, image};
+                return { title, price, id, image };
             })
             return products;
         } catch (error) {
@@ -40,10 +40,14 @@ class Products {
     }
 }
 
-//display all the products
+
 const allProductsContainer = document.querySelector('.all-products-container-div');
 
-class showProducts {
+let shoppingCart = [];
+
+class ShowProducts {
+
+    //display all the products
     displayProducts(products) {
         let result = '';
         products.forEach((element) => {
@@ -62,10 +66,44 @@ class showProducts {
         });
         allProductsContainer.innerHTML = result;
     }
+
+    //get the cart buttons
+    getCartBtns() {
+        const addToCartBtn = [...document.querySelectorAll('.add-to-cart-btn')]; //change nodelist to an array
+
+        addToCartBtn.forEach((btn) => {
+            //check whether some of the items are already in the shopping cart
+            const id = btn.dataset.id;
+            let inCart = shoppingCart.find((item) => item.id === id);
+            //when refreshing, if the item is already in the cart, the addtocart btn will be disabled for that item
+            if (inCart) {
+                btn.innerText = 'in cart';
+                btn.disabled = true;
+            }
+            //the item is not in the cart, we will add that item into the cart
+            btn.addEventListener('click', (event) => {
+                event.target.innerText = 'in cart';
+                event.target.disabled = true;
+            });
+        });
+    }
+}
+
+
+//store the selected fetched data into localstorage
+class StoreData {
+    static saveData(products) {
+        localStorage.setItem('allProducts', JSON.stringify(products));
+    }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
     const myProducts = new Products;
-    const display = new showProducts;
-    myProducts.getAllProducts().then((products) => display.displayProducts(products));
+    const display = new ShowProducts;
+    myProducts.getAllProducts().then((products) => {
+        display.displayProducts(products);
+        StoreData.saveData(products);
+    }).then(() => {
+        display.getCartBtns();
+    });
 });
